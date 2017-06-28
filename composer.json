@@ -24,13 +24,15 @@
 	},
 	"scripts": {
 		"post-install-cmd": [
-			"echo 0"
+			"php artisan clear-compiled",
+			"php artisan optimize"
 		],
 		"pre-update-cmd": [
 			"php artisan clear-compiled"
 		],
 		"post-update-cmd": [
-			"echo 0"
+			"php artisan clear-compiled",
+			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
 			"php artisan key:generate"
